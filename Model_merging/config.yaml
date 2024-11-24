@@ -1,0 +1,16 @@
+models:
+  - model: meta-llama/Llama-3.2-3B
+    # no parameters necessary for base model
+  - model: meta-llama/Llama-3.2-3B-Instruct
+    parameters:
+      density: 0.5
+      weight: 0.5
+  - model: unsloth/Llama-3.2-3B-Instruct
+    parameters:
+      density: 0.5
+      weight: 0.3
+merge_method: ties
+base_model: meta-llama/Llama-3.2-3B
+parameters:
+  normalize: true
+dtype: float16
